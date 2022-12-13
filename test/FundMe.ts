@@ -4,7 +4,7 @@ import { deployments, ethers, getNamedAccounts, getChainId } from "hardhat";
 
 describe("FundMe", function() {
   let fundMe: Contract, deployer, mockV3Aggregator: Contract;
-  this.beforeEach(async function() {
+  beforeEach(async function() {
     deployer = (await getNamedAccounts()).deployer;
 
     // deployment has a fixture function that runs all the deploy script based on the input tags

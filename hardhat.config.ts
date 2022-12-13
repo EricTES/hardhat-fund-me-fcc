@@ -30,6 +30,8 @@ const config: HardhatUserConfig = {
       url: GOERLI_RPC_URL,
       accounts: [GOERLI_PRIVATE_KEY],
       chainId: 5,
+      //@ts-ignore
+      blockConfirmations: 6,
     },
   },
   etherscan: {
