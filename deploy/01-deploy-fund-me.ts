@@ -27,7 +27,8 @@ const deployFundMeFunction: DeployFunction = async function({
     from: deployer,
     args: [ethUsdPriceFeed], // constructor parameters for FundMe contract
     log: true, // log out information about deployment
-    waitConfirmations: 1, // wait 6 blocks confirmation
+    //@ts-ignore
+    waitConfirmations: network.config.blockConfirmations || 1, // wait 6 blocks confirmation
   });
 
   // Only verify the contract deployment if it's NOT a mock aggregator
