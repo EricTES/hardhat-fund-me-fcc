@@ -1,4 +1,7 @@
 {
+  "name": "hardhat fund me",
+  "author": "Eric Tang",
+  "version": "1.0.0",
   "devDependencies": {
     "@ethersproject/abi": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
@@ -26,5 +29,12 @@
     "@chainlink/contracts": "^0.5.1",
     "dotenv": "^16.0.3",
     "solhint": "^3.3.7"
+  },
+  "scripts":{
+    "test": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network goerli",
+    "lint": "yarn solhint 'contacts/*.sol'",
+    "lint:fix":"yarn solhint 'contracts/*.sol' --fix",
+    "coverage": "yarn hardhat coverage"
   }
 }
