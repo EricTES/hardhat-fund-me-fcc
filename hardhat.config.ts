@@ -33,6 +33,10 @@ const config: HardhatUserConfig = {
       //@ts-ignore
       blockConfirmations: 6,
     },
+    // localhost: {
+    //   url: "http://127.0.0.1:8545/",
+    //   chainId: 31337,
+    // },
   },
   etherscan: {
     apiKey: ETHERSCAN_API_KEY,
@@ -50,8 +54,8 @@ const config: HardhatUserConfig = {
     outputFile: "gas-report.txt",
     noColors: true,
     currency: "USD",
-    coinmarketcap: COINMARKETCAP_API_KEY,
-    token: "BNB",
+    // coinmarketcap: COINMARKETCAP_API_KEY,
+    token: "ETH",
   },
 };
 
